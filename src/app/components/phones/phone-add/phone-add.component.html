@@ -1,0 +1,54 @@
+<div>
+  <form name="add_client_form" class="offset-2 col-md-8">
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="brand">Brand</label>
+          <input [(ngModel)]="phone.brand" name="brand" type="text" class="form-control" id="brand"
+                 placeholder="Phone brand" required>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <label for="type">Model</label>
+          <input [(ngModel)]="phone.type" name="type" type="text" class="form-control" id="type"
+                 placeholder="Phone model" required>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="imei">IMEI</label>
+          <input [(ngModel)]="phone.imei" type="text" name="imei" class="form-control" id="imei"
+                 placeholder="IMEI" required>
+        </div>
+      </div>
+    </div>
+
+    <!-- vreau sa adaug automat ID-ul clientului in functie de selectia facuta-->
+    <div class="row">
+      <div class="col-md-2">
+        <div class="form-group">
+          <label for="clientID">Owner ID</label>
+          <input [(ngModel)]="phone.clientID" type="text" name="clientID" class="form-control" id="clientID">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col text-center">
+        <button type="submit" class="btn btn-success" (click)="savePhone()">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+
+
+
+

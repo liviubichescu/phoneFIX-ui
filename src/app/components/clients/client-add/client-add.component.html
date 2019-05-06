@@ -1,0 +1,88 @@
+<div class="row offset-1 add_button">
+  <div class="col">
+    <button type="submit" class="btn btn-primary" (click)="openAddForm()">ADD Client</button>
+  </div>
+</div>
+
+<div *ngIf="display_form">
+  <form name="add_client_form" class="offset-2 col-md-8">
+    <div class="row">
+      <div class="col">
+        <button type="reset" class="btn btn-danger" (click)="closeAddForm(); clear()" style="float: right">X</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="#firstName">First Name</label>
+          <input [(ngModel)]="client.firstname" name="firstname" type="text" class="form-control" id=#firstName
+                 placeholder="Enter first name" required>
+          <div class="invalid-feedback" *ngIf="client.firstname">
+            You must enter a valid first name!
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input [(ngModel)]="client.lastname" name="lastname" type="text" class="form-control" id="lastName"
+                 placeholder="Enter last name" required>
+          <div class="invalid-feedback">
+            Please choose a username.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="address">Address</label>
+          <input [(ngModel)]="client.adress" type="text" name="addr" class="form-control" id="address"
+                 placeholder="Enter address" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="contactNumber">Contact Number</label>
+          <input [(ngModel)]="client.contactNumber" type="text" name="cn" class="form-control" id="contactNumber"
+                 placeholder="Enter contact number" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input [(ngModel)]="client.email" type="email" class="form-control" name="email" id="email"
+                 aria-describedby="emailHelp"
+                 placeholder="Enter email" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-center">
+        <button type="submit" class="btn btn-success" (click)="saveClient()">Submit</button>
+      </div>
+
+    </div>
+  </form>
+</div>
+
+
+
+
+
+

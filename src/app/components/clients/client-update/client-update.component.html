@@ -1,0 +1,87 @@
+
+<div class="container center_div" *ngIf="client">
+  <form name="add_client_form" class="col-md-8">
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="#firstName">First Name</label>
+          <input [(ngModel)]="client.firstname" name="firstname" type="text" class="form-control" id=#firstName
+                 placeholder="First name" required>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input [(ngModel)]="client.lastname" name="lastname" type="text" class="form-control" id="lastName"
+                 placeholder="Last name" required>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="address">Address</label>
+          <input [(ngModel)]="client.adress" type="text" name="addr" class="form-control" id="address"
+                 placeholder="Address" required>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="contactNumber">Contact Number</label>
+          <input [(ngModel)]="client.contactNumber" type="text" name="cn" class="form-control" id="contactNumber"
+                 placeholder="Contact number" required>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input [(ngModel)]="client.email" type="email" class="form-control" name="email" id="email"
+                 aria-describedby="emailHelp"
+                 placeholder="Email" required>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-center">
+        <button type="submit" class="btn btn-success" (click)="goBack()">Go back</button>
+      </div>
+      <div class="col text-center">
+        <button type="submit" class="btn btn-success" (click)="save()">Save</button>
+      </div>
+
+    </div>
+  </form>
+</div>
+
+
+<!--<div *ngIf="client">-->
+  <!--<h2>Utilizator {{client.firstname}} details</h2>-->
+  <!--<div>-->
+    <!--<label>First name: </label>-->
+    <!--<input [(ngModel)]="client.firstname" placeholder="firstname">-->
+  <!--</div>-->
+  <!--<div>-->
+    <!--<label>Last name: </label>-->
+    <!--<input [(ngModel)]="client.lastname" placeholder="lastname">-->
+  <!--</div>-->
+  <!--<div>-->
+    <!--<label>Email: </label>-->
+    <!--<input [(ngModel)]="client.email" placeholder="email">-->
+  <!--</div>-->
+  <!--<div>-->
+    <!--<label>Adress: </label>-->
+    <!--<input [(ngModel)]="client.adress" placeholder="address">-->
+  <!--</div>-->
+  <!--<div>-->
+    <!--<label>Contact number: </label>-->
+    <!--<input [(ngModel)]="client.contactNumber" placeholder="phone">-->
+  <!--</div>-->
+  <!--<button (click)="goBack()">Back</button>-->
+  <!--<button (click)="save()">Save</button>-->
+<!--</div>-->
